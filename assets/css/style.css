@@ -1,0 +1,54 @@
+/*Estilos páginas HTML Home */
+.center {
+    text-align: center;
+}
+
+.container{
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu li{
+    display : inline;
+    padding: 15px;
+}
+
+#menu a{
+    text-decoration: none;
+    color: rgb(10, 75, 75);
+    font-size: 20px;
+}
+
+#menu a:hover{
+    color: cyan;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+.br-50{
+    border-radius: 50%;
+}
+
+.tm-social{
+    width: 35px;
+    height: 35px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.justify{
+    text-align: justify;
+}
+
+
+/*Estilo página HTML Contato */
+
+.ml-50{
+    margin-left: 50px;
+}
