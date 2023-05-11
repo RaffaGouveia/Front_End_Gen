@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu contato</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu contato</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
 
-</head>
-<body>
-    <ul id = "menu">
-        <li>
-            <a href="index.html"> Home</a>
-        </li>
-        <li>
-            <a href="contato.html"> Contato</a>
-        </li>
-    </ul>
-<h1 class = "center"> Entre em contato comigo!</h1>
+    </head>
 
-    <div class="container mb-50">
-        
-        <div>
-            <form>
-                <label for="nome">Nome :</label> <br>
-                <input type="text" id = "nome">
-        <br>
-        <br>
-                <label for="email">E-mail : </label> <br>
-                <input type="email" id = "email">
-        <br>
-        <br>
-                <label for="assunto">Assunto : </label> <br>
-                <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
-        <br>
-        <br>
-            <button>Enviar</button>
-            </form>
-        </div>
+    <body>
+        <ul id = "menu">
+            <li>
+                <a href="index.html"> Home</a>
+            </li>
+            <li>
+                <a href="contato.html"> Contato</a>
+            </li>
+        </ul>
+        <h1 class = "center"> Entre em contato comigo!</h1>
 
-        <div class="ml-50">
-            <p>
-                Av. Sapoppemba N° 5425
-            </p>
-        
-            <p>
-                São Paulo - SP
-            </p>
-        
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.654497663185!2d-46.54053908255615!3d-23.580849200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dbcdadc82bf%3A0x880a668ffb7474b!2sAv.%20Sapopemba%2C%205425%20-%20Sapopemba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003374-001!5e0!3m2!1spt-BR!2sbr!4v1683565046053!5m2!1spt-BR!2sbr" 
-            width="400"
-            height="250" 
-            style="border:0;" 
-            allowfullscreen=""
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-        </div>
-    </div>
+            <div class="container mb-50">
+                <div>
+                    <form>
+                        <label for="nome">Nome :</label> <br>
+                        <input type="text" id = "nome" onkeyup = 'validaNome()'>
+                            <div id="txtNome" ></div>
+                        <br>
+                        <label for="email">E-mail : </label> <br>
+                        <input type="email" id = "email" onkeyup="validaEmail()">
+                            <div id = "txtEmail"></div>
+                        <br>
+                        <label for="assunto">Assunto : </label> <br>
+                        <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                            <div id = "txtAssunto"></div>
+                        <br>
+                        <br>
+                        <button onclick="enviar()">Enviar</button>
+                    </form>
+                </div>
+                <div class="ml-50">
+                    <p>
+                        Av. Sapoppemba N° 5425
+                    </p>
+                
+                    <p>
+                        São Paulo - SP
+                    </p>
+                
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.654497663185!2d-46.54053908255615!3d-23.580849200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5dbcdadc82bf%3A0x880a668ffb7474b!2sAv.%20Sapopemba%2C%205425%20-%20Sapopemba%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003374-001!5e0!3m2!1spt-BR!2sbr!4v1683565046053!5m2!1spt-BR!2sbr" 
+                        width="400"
+                        height="250" 
+                        style="border:0;" 
+                        allowfullscreen=""
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        id = "mapa" onmousemove="mapaZoom()" onmouseout="mapaNormal()"
+                    ></iframe>
+                </div>
+            </div>
 
     <hr>
-    <footer>
-
-        <div class = "container">
-
-            <a href="https://www.facebook.com/raffabiscuit/" target = "_blank">
-                <img class = "tm-social p-30" src="assets/img/facebook.png" alt="Logo Facebook">
-            </a>
-
-            <a href="https://www.instagram.com/raffaauditore/" target = "_blank">
-                <img class = "tm-social p-30" src="assets/img/linkedin.png" alt="Logo Linkedin">
-            </a>
-            
-            <a href="https://www.linkedin.com/in/rafael-it-gouveia/" target = "_blank">
-                <img class = "tm-social p-30" src="assets/img/instagram.png" alt="Logo Instagram">
-            </a>
-
-        </div>
-        <p class = "center">
-            Todos os direitos reservados: Rafael Gouveia &copy;
-        </p>
+        <footer>
         
-    </footer>
-</body>
+            <div class = "container">
+                <a href="https://www.facebook.com/raffabiscuit/" target = "_blank">
+                    <img class = "tm-social p-30" src="assets/img/facebook.png" alt="Logo Facebook">
+                
+                <a href="https://www.instagram.com/raffaauditore/" target = "_blank">
+                    <img class = "tm-social p-30" src="assets/img/linkedin.png" alt="Logo Linkedin">
+                </a>
+                
+                <a href="https://www.linkedin.com/in/rafael-it-gouveia/" target = "_blank">
+                    <img class = "tm-social p-30" src="assets/img/instagram.png" alt="Logo Instagram">
+                </a>
+                
+            </div>
+            <p class = "center">
+                Todos os direitos reservados: Rafael Gouveia &copy;
+            </p>
+        
+        </footer>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
